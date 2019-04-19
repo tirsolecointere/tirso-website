@@ -1,0 +1,37 @@
+.btn
+    font-weight: 700
+    border: none
+    transition: all .2s ease
+    &:not(.btn-link):not(.btn-light)
+        color: white !important
+    &:not(.btn-light):not(.btn-link)
+        color: white !important
+
+.btn.btn-primary
+    &:hover
+        background-color: map-get($theme-colors, dark)
+        box-shadow: $btn-hover-shadow
+        transform: translateY(-2px)
+    &:focus
+        background-color: lighten(map-get($theme-colors, dark), 10%)
+        box-shadow: $btn-hover-shadow !important
+    &:active:focus
+        background-color: map-get($theme-colors, dark)
+        box-shadow: $btn-hover-shadow !important
+        transform: translateY(0px)
+
+
+
+.navbar-nav .nav-link
+    font-size: 20px
+    font-weight: 700
+    color: map-get($theme-colors, dark) !important
+    border-radius: 10px
+    padding-top: 5px
+    padding-bottom: 5px
+    transition: all .2s ease
+    &:hover
+        background-color: map-get($theme-colors, dark)
+        color: white !important
+        transform: translateY(-2px)
+        box-shadow: $btn-hover-shadow

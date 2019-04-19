@@ -1,0 +1,301 @@
+@import "vars"
+@import "global"
+@import "overrides"
+@import "utilities"
+// place this @import <mediaqueries> at the bottom of this main.sass
+@import "mediaqueries"
+
+.logo
+    max-height: 35px
+    user-select: none
+
+.main-header
+    position: relative
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    background: url('../assets/images/header-bg.png') no-repeat center/cover
+    min-height: 100vh
+    overflow: hidden
+    .navbar
+        z-index: 1010
+
+    #bw
+        +position(absolute, null, 0, 0, 0)
+        height: 340px
+        background-image: url('../assets/images/back-wave.png')
+        background-repeat: repeat-x
+        background-size: contain
+        background-position: left bottom
+        width: 100%
+        animation: bw 80s linear infinite
+        animation-fill-mode: both
+        @keyframes bw
+            from
+                background-position: left bottom
+            to
+                background-position: -1580px bottom
+    #fw
+        +position(absolute, null, 0, 0, 0)
+        height: 340px
+        background-image: url('../assets/images/front-wave.png')
+        background-repeat: repeat-x
+        background-size: contain
+        background-position: left bottom
+        width: 100%
+        animation: bw 40s linear infinite
+        animation-fill-mode: both
+        @keyframes bw
+            from
+                background-position: left bottom
+            to
+                background-position: -1580px bottom
+
+    #bubble1
+        $bubble1-scale: .6
+        +position(absolute, 20%, null, null, 7%)
+        transform: translate(0px, 0px) scale($bubble1-scale)
+        animation: bubble1 5s linear infinite
+        @keyframes bubble1
+            0%
+                transform: translate(0px, 0px) scale($bubble1-scale)
+            50%
+                transform: translate(0px, 20px) scale($bubble1-scale)
+            100%
+                transform: translate(0px, 0px) scale($bubble1-scale)
+    #bubble2
+        $bubble2-scale: .4
+        +position(absolute, 51%, null, null, -50px)
+        transform: translate(0px, 0px) scale($bubble2-scale)
+        animation: bubble2 6s linear infinite
+        @keyframes bubble2
+            0%
+                transform: translate(0px, 0px) scale($bubble2-scale)
+            50%
+                transform: translate(0px, 15px) scale($bubble2-scale)
+            100%
+                transform: translate(0px, 0px) scale($bubble2-scale)
+    #bubble3
+        $bubble3-scale: .75
+        +position(absolute, null, null, 25%, 25%)
+        transform: translate(0px, 0px) scale($bubble3-scale)
+        animation: bubble3 6s linear infinite
+        @keyframes bubble3
+            0%
+                transform: translate(0px, 0px) scale($bubble3-scale)
+            50%
+                transform: translate(0px, 30px) scale($bubble3-scale)
+            100%
+                transform: translate(0px, 0px) scale($bubble3-scale)
+    #bubble4
+        $bubble4-scale: 1
+        +position(absolute, 20%, 25%, null, null)
+        transform: translate(0px, 0px) scale($bubble4-scale)
+        animation: bubble4 4.6s linear infinite
+        @keyframes bubble4
+            0%
+                transform: translate(0px, 0px) scale($bubble4-scale)
+            50%
+                transform: translate(0px, 45px) scale($bubble4-scale)
+            100%
+                transform: translate(0px, 0px) scale($bubble4-scale)
+    #bubble5
+        $bubble5-scale: 1.1
+        +position(absolute, 40%, -50px, null, null)
+        transform: translate(0px, 0px) scale($bubble5-scale)
+        animation: bubble5 4s linear infinite
+        animation-delay: 2s
+        @keyframes bubble5
+            0%
+                transform: translate(0px, 0px) scale($bubble5-scale)
+            50%
+                transform: translate(0px, 50px) scale($bubble5-scale)
+            100%
+                transform: translate(0px, 0px) scale($bubble5-scale)
+
+
+.hero
+    &__content
+        position: relative
+        z-index: 1010
+    &__title
+        font-size: 60px
+        font-weight: 700
+    &__desc
+        color: map-get($theme-colors, light)
+        font-weight: 400
+        font-size: 22px
+
+.section
+    &__title
+        display: inline-block
+        font-size: 50px
+        font-weight: 700
+        background: linear-gradient(104.74deg, rgba(#B01EFF, 1) 0%, rgba(#E1467C, 1) 100%)
+        -webkit-text-fill-color: transparent
+        -webkit-background-clip: text
+        margin-bottom: 0
+        &--wrapper
+            text-align: center
+            margin-bottom: 50px
+
+.projectCard
+    position: relative
+    height: 225px
+    border-radius: 20px
+    overflow: hidden
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15)
+    margin-bottom: 32px
+    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s
+    &:before
+        content: ''
+        +position(absolute, 0, 0, 0, 0)
+        width: 100%
+        height: 100%
+        background: url('../assets/images/projectCard--hover.png') no-repeat center
+        opacity: 0
+        transform: translateY(60%)
+        transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s
+    &--wrapper
+        display: block
+        color: white
+    &__caption
+        +position(absolute, null, 0, 0, 0)
+        padding: 0 20px 16px 20px
+    &__title
+        font-size: 24px
+        font-weight: 700
+        margin-bottom: 0
+        color: white
+    &__tag
+        color: map-get($theme-colors, light)
+        font-size: 14px
+        font-weight: 600
+        text-transform: uppercase
+        margin-bottom: 0
+    img.object-cover
+        transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s
+
+    // projectCard hover
+    &:hover
+        transform: scale(1.1, 1.1)
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 30px 60px
+        &:before
+            opacity: .1
+            transform: translateY(-20%)
+        img.object-cover
+            height: 110%
+
+.skillItem
+    transition: all .3s ease
+    &__icon
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        justify-content: center
+        align-items: center
+        +square(128px)
+        border-radius: 100%
+        background: #FFFFFF
+        border: 1px solid map-get($theme-colors, light)
+        box-shadow: 0px 10px 20px rgba(map-get($theme-colors, light), 0.5)
+        transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s
+        margin: 0 auto 30px auto
+    &__img
+        flex-shrink: 0
+        flex-grow: 0
+    &__text
+        display: inline-block
+        font-weight: 700
+        margin: 0 auto
+        background: linear-gradient(104.74deg, rgba(map-get($theme-colors, light), 1) 0%, rgba(map-get($theme-colors, light), 1) 100%)
+        -webkit-text-fill-color: transparent
+        -webkit-background-clip: text
+        transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0s
+    &:hover
+        filter: blur(0px) !important
+        .skillItem__icon
+            background-color: map-get($theme-colors, light)
+            box-shadow: 0px 30px 60px map-get($theme-colors, light)
+            transform: translateY(-10px) scale(1.2, 1.2)
+        .skillItem__text
+            background: linear-gradient(104.74deg, rgba(#B01EFF, 1) 0%, rgba(#E1467C, 1) 100%)
+            -webkit-text-fill-color: transparent
+            -webkit-background-clip: text
+            transform: translateY(-5px)
+
+#skills-row
+    transition: all .2s ease
+    &:hover
+        .skillItem
+            filter: blur(3px)
+
+footer#contact
+    position: relative
+    &:before
+        content: ''
+        +position(absolute, null, 0, 0, 0)
+        height: 240px
+        background-image: url('../assets/images/back-wave.png')
+        background-repeat: repeat-x
+        background-size: contain
+        background-position: left bottom
+        width: 100%
+        animation: bw 100s linear infinite
+        animation-fill-mode: both
+        z-index: -1
+    &:after
+        content: ''
+        +position(absolute, null, 0, 0, 0)
+        height: 340px
+        background-image: url('../assets/images/front-wave.png')
+        background-repeat: repeat-x
+        background-size: contain
+        background-position: left bottom
+        width: 100%
+        animation: bw 50s linear infinite
+        animation-fill-mode: both
+        z-index: -1
+
+.contact
+    &__desc
+        color: #205284
+        font-weight: 600
+        font-size: 22px
+
+.socialNetwork
+    +square(58px)
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background-color: lightgray
+    border-radius: 100%
+    color: white
+    font-size: 32px
+    text-align: center
+    box-shadow: 0px 10px 20px rgba(map-get($theme-colors, secondary), 0.15)
+    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s
+    &:hover
+        color: white
+        box-shadow: 0px 30px 60px map-get($theme-colors, light)
+        transform: translateY(-5px) scale(1.2, 1.2)
+        filter: blur(0px) !important
+    &__list
+        transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s
+        &:hover
+            .socialNetwork
+                filter: blur(3px)
+    &.--fb
+        background-image: linear-gradient(135deg, #4F73C3 0%, #3C46A2 100%)
+    &.--tw
+        background-image: linear-gradient(135deg, #14F1D9 0%, #3672F8 100%)
+    &.--be
+        background-image: linear-gradient(135deg, #3672F8 0%, #B01EFF 100%)
+    &.--gh
+        background-image: linear-gradient(135deg, #435F7B 0%, #24292E 100%)
+    &.--gm
+        background-image: linear-gradient(135deg, #de4537 0%, #f75985 100%)
