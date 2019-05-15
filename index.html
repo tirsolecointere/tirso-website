@@ -23,17 +23,21 @@
 <body>
 
     <header class="main-header">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm py-lg-4">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
             <a class="navbar-brand d-md-none" href="./">
                 <img src="assets/images/logo.svg" class="logo" alt="Tirso Lecointere Logo" title="Tirso Lecointere">
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div>
+                <a href="#contact" class="btn btn-primary px-4 py-2 d-md-none">Contact</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
             <div class="collapse navbar-collapse justify-content-md-center" id="mainNavbar">
-                <ul class="navbar-nav align-items-center">
+                <ul class="navbar-nav align-items-md-center text-center py-4 py-md-0">
                     <li class="nav-item d-none d-md-inline-block mx-4">
                         <a class="navbar-brand" href="./">
                             <img src="assets/images/logo.svg" class="logo" alt="Tirso Lecointere Logo" title="Tirso Lecointere">
@@ -48,7 +52,7 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link px-3" href="#skills">Skills</a>
                     </li>
-                    <li class="nav-item ml-md-3">
+                    <li class="nav-item ml-md-3 d-none d-md-block">
                         <a href="#contact" class="btn btn-primary px-4 py-2">Contact</a>
                     </li>
                 </ul>
@@ -57,8 +61,10 @@
         <div class="hero__content d-flex flex-column justify-content-center align-items-center flex-grow-1 h-100 px-3 text-white">
             <div class="row">
                 <div class="col-lg-6 mx-auto text-center">
-                    <h1 class="hero__title">About me.</h1>
-                    <h4 class="hero__desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</h4>
+                    <div id="parallax-hero">
+                        <h1 class="hero__title">About me.</h1>
+                        <h4 class="hero__desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -178,7 +184,7 @@
                 </div>
                 <div class="row">
                     <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                        <a href="" class="projectCard--wrapper">
+                        <a href="" class="projectCard--wrapper" target="_blank">
                             <figure class="projectCard">
                                 <img src="assets\images\projects\969377.jRJKWa.1ab8ad05-e5c7-4ae5-a20f-54457d42edd8.png" alt="" class="object-cover">
                                 <figcaption class="projectCard__caption">
@@ -192,7 +198,7 @@
                         </a>
                     </div>
                     <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                        <a href="" class="projectCard--wrapper">
+                        <a href="" class="projectCard--wrapper" target="_blank">
                             <figure class="projectCard">
                                 <img src="assets\images\projects\969377.bJKWzR.5c815171-4028-481b-b632-df1d6661b04b.png" alt="" class="object-cover">
                                 <figcaption class="projectCard__caption">
@@ -206,7 +212,7 @@
                         </a>
                     </div>
                     <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                        <a href="" class="projectCard--wrapper">
+                        <a href="" class="projectCard--wrapper" target="_blank">
                             <figure class="projectCard">
                                 <img src="assets\images\projects\969377.bJKRbo.11f4ac22-6302-42c7-8453-851dfe8725fe.png" alt="" class="object-cover">
                                 <figcaption class="projectCard__caption">
@@ -225,8 +231,8 @@
 
         <section id="skills" class="py-section-5">
             <div class="container">
-                <div class="section__title--wrapper">
-                    <h1 class="section__title text-center">Skills</h1>
+                <div class="section__title--wrapper text-center">
+                    <h1 class="section__title">Skills</h1>
                 </div>
                 <div id="skills-row" class="row">
                     <div class="col-md">

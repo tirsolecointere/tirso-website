@@ -2,12 +2,11 @@
 @import "global"
 @import "overrides"
 @import "utilities"
-// place this @import <mediaqueries> at the bottom of this main.sass
-@import "mediaqueries"
 
 .logo
     max-height: 35px
     user-select: none
+    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s
 
 .main-header
     position: relative
@@ -19,10 +18,19 @@
     min-height: 100vh
     overflow: hidden
     .navbar
-        z-index: 1010
+        z-index: 1080
+        padding-top: 1.5rem
+        padding-bottom: 1.5rem
+        transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0s
+    .navbar--scrolled
+        background-color: rgba(white, .8)
+        padding-top: .5rem
+        padding-bottom: .5rem
+        .logo
+            max-height: 25px
 
     #bw
-        +position(absolute, null, 0, 0, 0)
+        +position(absolute, null, 0, -2px, 0)
         height: 340px
         background-image: url('../assets/images/back-wave.png')
         background-repeat: repeat-x
@@ -37,7 +45,7 @@
             to
                 background-position: -1580px bottom
     #fw
-        +position(absolute, null, 0, 0, 0)
+        +position(absolute, null, 0, -2px, 0)
         height: 340px
         background-image: url('../assets/images/front-wave.png')
         background-repeat: repeat-x
@@ -316,3 +324,6 @@ footer#contact
         background-image: linear-gradient(135deg, #435F7B 0%, #24292E 100%)
     &.--gm
         background-image: linear-gradient(135deg, #de4537 0%, #f75985 100%)
+
+// place this @import <mediaqueries> at the bottom of this main.sass
+@import "mediaqueries"
