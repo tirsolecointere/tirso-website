@@ -139,4 +139,22 @@ aside, main
 .pill
     display: inline-block
     padding: .25rem
-    border: 2px solid #000
+    color: var(--body-color)
+    border: 2px solid var(--body-color)
+
+.toolbar
+    position: fixed
+    top: 1rem
+    right: 1rem
+    z-index: 999
+
+#darkmode-toggler
+    .lighted
+        display: none
+    .darked
+        display: inline
+    &.isDark
+        .lighted
+            display: inline
+        .darked
+            display: none
