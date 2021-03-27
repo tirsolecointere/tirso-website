@@ -1,10 +1,35 @@
-// CONSTANTS
-$MAIN_FONT: monospace
-
 $primary:       #FFDD2A
-$secondary:     #FFFCED
+$secondary:     #fdf7db
 
 $body-color:    #000000
 $body-bg:       #FF93EE
+$body-font-size:  16px
 
-$dashed-border: 2px dashed black
+$border-color:  #000000
+
+\:root
+    --primary:                      #{$primary}
+    --secondary:                    #{$secondary}
+    --body-bg-color:                #{$body-bg}
+    --body-bg-img:                  url('/assets/images/bg-noise.gif')
+    --body-color:                   #{$body-color}
+    --body-font-size:               #{$body-font-size}
+    --body-font-family:             monospace
+    --border-color:                 #{$border-color}
+    --item-shadow-color:          #000000
+    --btn-color:                    var(--body-color)
+    --btn-primary-color:          #000
+    --btn-secondary-color:        #000
+    --scrollbar-thumb-bg:         rgba(0, 0, 0, .3)
+    --scrollbar-thumb-bg-hover:   rgba(0, 0, 0, .4)
+
+.dark
+    --secondary:                  #89766E
+    --body-color:                 #DEDACB
+    --body-bg-color:              #3D0D35
+    --body-bg-img:                  url('/assets/images/bg-noise-dark.gif')
+    --border-color:                 var(--secondary)
+    --item-shadow-color:          #50344B
+    --btn-color:                    var(--body-color)
+    --scrollbar-thumb-bg:         rgba(137, 118, 110, .3)
+    --scrollbar-thumb-bg-hover:   rgba(137, 118, 110, .4)

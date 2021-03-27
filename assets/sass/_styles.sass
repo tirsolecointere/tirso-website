@@ -3,7 +3,7 @@ aside
     flex-shrink: 0
     flex-grow: 1
     height: 100vh
-    border-right: $dashed-border
+    border-right: 2px dashed var(--border-color)
     overflow-y: auto
 
 main
@@ -18,9 +18,9 @@ aside, main
     &::-webkit-scrollbar-track
         background: transparent
     &::-webkit-scrollbar-thumb
-        background: rgba(black, .3)
+        background: var(--scrollbar-thumb-bg)
         &:hover
-            background: rgba(black, .35)
+            background: var(--scrollbar-thumb-bg-hover)
 
 .logo
     display: inline
@@ -28,18 +28,18 @@ aside, main
     font-size: 2rem
     line-height: 1
     text-transform: uppercase
-    color: $body-color
+    color: var(--body-color)
     text-decoration: none
-    text-shadow: 0 1px 0 $secondary
+    text-shadow: 0 1px 0 var(--secondary)
     &:hover, &:focus
-        background-color: $secondary
-        text-shadow: 0 1px 0 $body-color
+        background-color: var(--secondary)
+        text-shadow: 0 1px 0 var(--body-color)
 
 .aside
     &__section
         padding: 70px 50px
         &:not(:last-child)
-            border-bottom: $dashed-border
+            border-bottom: 2px dashed var(--border-color)
         &__title
             margin-top: 0
     &__desc
@@ -50,7 +50,7 @@ aside, main
         display: flex
         padding: 70px 50px
         &:not(:last-child)
-            border-bottom: $dashed-border
+            border-bottom: 2px dashed var(--border-color)
         &__title
             position: relative
             width: 2rem
@@ -69,7 +69,7 @@ aside, main
                     +absolute(null, null, 0, 0)
                     height: .5rem
                     width: 60%
-                    background-color: $secondary
+                    background-color: var(--secondary)
                     z-index: -1
         &__content
             display: grid
@@ -84,12 +84,12 @@ aside, main
         transform: rotate(0deg)
         .item
             &__title
-                background-color: $secondary
+                background-color: var(--secondary)
     &:focus-within
         transform: rotate(0deg)
         .item
             &__title
-                background-color: $secondary
+                background-color: var(--secondary)
     &__img
         position: relative
         display: block
@@ -105,19 +105,19 @@ aside, main
         &::before
             content: ''
             +absolute(0, 0, 0, 0)
-            background-color: #000
+            background-color: var(--item-shadow-color)
             transform: rotate(4deg)
             z-index: -1
             pointer-events: none
     &__title
         display: inline-block
-        color: $body-color
+        color: var(--body-color)
         font-weight: 700
         margin-bottom: 5px
         letter-spacing: 2px
         text-decoration: none
         &:focus
-            background-color: $secondary
+            background-color: var(--secondary)
         h1
             font-size: 1.25rem
             margin: 0
