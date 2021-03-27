@@ -1,0 +1,27 @@
+.btn
+    display: inline-block
+    padding: .75rem 1rem
+    font-size: 1rem
+    font-weight: 700
+    color: #000
+    text-decoration: none
+    box-shadow: 3px 3px 0px #000000
+    border: 2px solid #000000
+    user-select: none
+    cursor: pointer
+    &:hover, &:focus
+        box-shadow: 5px 5px 0px #000000
+        span
+            display: inline-block
+            transform: rotate(-3deg)
+    &.btn
+        &--primary
+            background-color: $primary
+        &--secondary
+            background-color: $secondary
+        &--sm
+            padding: .25rem .5rem
+            font-size: .875rem
+            box-shadow: 2px 2px 0px #000000
+            &:hover, &:focus
+                box-shadow: 3px 3px 0px #000000

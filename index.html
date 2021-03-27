@@ -8,22 +8,147 @@
     <title>Tirso Lecointere</title>
 
     <!-- main css -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/core.min.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
 
     <!-- favicon -->
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon"/>
 </head>
 <body>
 
-    <header>header</header>
+    <aside>
+        <div class="aside__section">
+            <a class="logo" href="/">Tirso Lecointere</a>
+            <p class="aside__desc">Tirso Lecointere — A self-taught frontend designer with 3 years of experience, expert in HTML5/CSS3.</p>
+            <p class="aside__desc">He has mainly designed dashboards, ecommerce websites, blogs and landing pages.</p>
+
+            <ul class="social">
+                <li class="social__item">
+                    <a href="" class="btn btn--primary btn--sm">
+                        <span>Facebook</span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="" class="btn btn--primary btn--sm">
+                        <span>Twitter</span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="" class="btn btn--primary btn--sm">
+                        <span>LinkedIn</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="aside__section">
+            <h2 class="aside__section__title">Work experience</h2>
+            <p class="aside__desc">Tirso Lecointere — A self-taught frontend designer with 3 years of experience, expert in HTML5/CSS3.</p>
+        </div>
+        
+        <div class="aside__section">
+            <h2 class="aside__section__title">Skills</h2>
+            <ul class="list--inline">
+                <li class="list--inline__item">
+                    <span class="pill">HTML/CSS</span>
+                </li>
+                <li class="list--inline__item">
+                    <span class="pill">Bootstrap</span>
+                </li>
+                <li class="list--inline__item">
+                    <span class="pill">Tailwind</span>
+                </li>
+                <li class="list--inline__item">
+                    <span class="pill">UX/UI</span>
+                </li>
+                <li class="list--inline__item">
+                    <span class="pill">Figma</span>
+                </li>
+                <li class="list--inline__item">
+                    <span class="pill">Photoshop</span>
+                </li>
+            </ul>
+        </div>
+    </aside>
 
     <main>
 
-        <h1>Hello world</h1>
+        <!-- projects -->
+        <section class="main__section">
+            <div class="main__section__title">
+                <h1>Projects</h1>
+            </div>
+            <div class="main__section__content">
+
+                <figure class="item">
+                    <a href="/" class="item__img" tabindex="-1">
+                        <img src="\assets\images\projects\akb-banner.png" alt="">
+                    </a>
+                    <a href="/" class="item__title">
+                        <h1>AKB Fintech</h1>
+                    </a>
+                    <p class="item__category">UX/UI Design + HTML/CSS</p>
+                </figure>
+
+                <figure class="item">
+                    <a href="/" class="item__img" tabindex="-1">
+                        <img src="\assets\images\projects\argenper-banner.png" alt="">
+                    </a>
+                    <a href="/" class="item__title">
+                        <h1>Argenper</h1>
+                    </a>
+                    <p class="item__category">UX/UI Design + HTML/CSS</p>
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- challenges -->
+        <section class="main__section">
+            <div class="main__section__title">
+                <h1>Challenges</h1>
+            </div>
+            <div class="main__section__content">
+
+                <figure class="item">
+                    <a href="/" class="item__img" tabindex="-1">
+                        <img src="\assets\images\projects\969377.jRJKWa.1ab8ad05-e5c7-4ae5-a20f-54457d42edd8.png" alt="">
+                    </a>
+                    <a href="/" class="item__title">
+                        <h1>Twitter Skeleton Loader</h1>
+                    </a>
+                    <p class="item__category">CSS Animation</p>
+                </figure>
+
+                <figure class="item">
+                    <a href="/" class="item__img" tabindex="-1">
+                        <img src="\assets\images\projects\969377.bJKWzR.5c815171-4028-481b-b632-df1d6661b04b.png" alt="">
+                    </a>
+                    <a href="/" class="item__title">
+                        <h1>Empanada & Malta - Venezuelan Food</h1>
+                    </a>
+                    <p class="item__category">CSS Drawing</p>
+                </figure>
+
+                <figure class="item">
+                    <a href="/" class="item__img" tabindex="-1">
+                        <img src="\assets\images\projects\969377.bJKRbo.11f4ac22-6302-42c7-8453-851dfe8725fe.png" alt="">
+                    </a>
+                    <a href="/" class="item__title">
+                        <h1>Earth Rotation</h1>
+                    </a>
+                    <p class="item__category">CSS Animation</p>
+                </figure>
+
+            </div>
+        </section>
 
     </main>
 
     <!-- main js -->
-    <script src="js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

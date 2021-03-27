@@ -1,8 +1,20 @@
 body
+    display: flex
     font-family: $MAIN_FONT
+    font-size: 16px
+    font-weight: 400
+    line-height: 1.25
+    color: $body-color
+    text-align: left
+    background: $body-bg url('/assets/images/bg-noise.gif') repeat
+    overflow: hidden
 
-a:hover
-    text-decoration: none
+a
+    &:hover
+        text-decoration: none
+    &:focus
+        outline: 3px dotted $secondary
+        outline-offset: .25rem
 
 ::selection
-    background-color: rgba(map-get($theme-colors, primary), 1)
+    background-color: $primary
