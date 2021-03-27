@@ -19,20 +19,6 @@
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px)
-    aside
-        max-width: 320px
-    .aside
-        &__section 
-            padding: 30px 20px
-
-    .main
-        &__section
-            &__content
-                grid-template-columns: minmax(0, 1fr) 
-                gap: 5rem 2rem
-
-// X-Small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px)
     body
         flex-direction: column
         overflow: auto
@@ -43,9 +29,21 @@
         overflow: auto
         height: auto
 
+    .aside
+        &__section 
+            padding: 30px 20px
+
     .main
         &__section
             &__content
-                gap: 3rem 1rem
+                gap: 3rem 2.5rem
             &__title
                 margin-right: 2rem
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px)
+    .main
+        &__section
+            &__content
+                grid-template-columns: minmax(0, 1fr)
+                gap: 3rem 1rem
