@@ -24,7 +24,7 @@ aside, main
 
 .logo
     display: inline
-    font-family: 'Major Mono Display', monospace;
+    font-family: 'Major Mono Display', monospace
     font-size: 2rem
     line-height: 1
     text-transform: uppercase
@@ -66,7 +66,7 @@ aside, main
                 z-index: 1
                 &:before
                     content: ''
-                    +absolute(null, null, 0, 0)
+                    +absolute(null, null, 0, -.5rem)
                     height: .5rem
                     width: 60%
                     background-color: var(--secondary)
@@ -125,6 +125,20 @@ aside, main
         margin: 0
         text-transform: uppercase
         letter-spacing: 1px
+    &__desc
+        display: block
+        margin: 0
+        opacity: .80
+        margin-bottom: .25rem
+    &__date
+        display: block
+        margin: 0
+        opacity: .80
+        font-size: .875rem
+        margin-top: .33rem
+        &-icon
+            display: inline
+            vertical-align: middle
 
 .social, .list--inline
     padding-left: 0
